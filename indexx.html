@@ -1,91 +1,409 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<title>skrollr - parallax scrolling for the masses</title>
-
-	<link  rel="stylesheet" type="text/css" />
-	<link  rel="stylesheet" type="text/css" />
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-	<script type="text/javascript" src="js/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="js/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	 $(function () {
-            var s = skrollr.init({
-                edgeStrategy: 'set',
-                easing: {
-                    WTF: Math.random,
-                    inverted: function(p) {
-                        return 1-p;
-                    }
-                }
-            });
-        })
-	</script>
-</head>
-
-<body>
-	<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
-	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
-	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
-
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
-
-	<div id="intro" data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;" data-500="opacity:0;top:-10%;transform:rotate(-90deg);">
-		<h1><a href="https://github.com/Prinzhorn/skrollr">skrollr</a></h1>
-		<h2>parallax scrolling for the masses</h2>
-		<p>let's get scrollin' ;-)</p>
-		<p class="arrows">▼&nbsp;▼&nbsp;▼</p>
-	</div>
-
-	<div id="transform" data-500="transform:scale(0) rotate(0deg);" data-1000="transform:scale(1) rotate(1440deg);opacity:1;" data-1600="" data-1700="transform:scale(5) rotate(3240deg);opacity:0;">
-		<h2>transform</h2>
-		<p>scale, skew and rotate the sh** out of any element</p>
-	</div>
-
-	<div id="properties" data-1700="top:100%;" data-2200="top:0%;" data-3000="display:block;" data-3700="top:-100%;display:none;">
-		<h2>all numeric properties</h2>
-		<p>width, height, padding, font-size, z-index, blah blah blah</p>
-	</div>
-
-	<div id="easing_wrapper" data-0="display:none;" data-3900="display:block;" data-4900="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-5900="background:rgba(0,0,0,1);color:rgb(255,255,255);" data-10000="top:0%;" data-12000="top:-100%;">
-		<div id="easing" data-3900="left:100%" data-4600="left:25%;">
-			<h2>easing?</h2>
-			<p>sure.</p>
-			<p>let me dim the <span data-3900="" data-4900="color[swing]:rgb(0,0,0);" data-5900="color:rgb(255,255,0);">lights</span> for this one...</p>
-			<p data-5900="opacity:0;font-size:100%;" data-6500="opacity:1;font-size:150%;">you can set easings for each property and define own easing functions</p>
-		</div>
-
-		<div class="drop" data-6500="left:15%;bottom:100%;" data-9500="bottom:0%;">linear</div>
-		<div class="drop" data-6500="left:25%;bottom[quadratic]:100%;" data-9500="bottom:0%;">quadratic</div>
-		<div class="drop" data-6500="left:35%;bottom[cubic]:100%;" data-9500="bottom:0%;">cubic</div>
-		<div class="drop" data-6500="left:45%;bottom[swing]:100%;" data-9500="bottom:0%;">swing</div>
-		<div class="drop" data-6500="left:55%;bottom[WTF]:100%;" data-9500="bottom:0%;">WTF</div>
-		<div class="drop" data-6500="left:65%;bottom[inverted]:100%;" data-9500="bottom:0%;">inverted</div>
-		<div class="drop" data-6500="left:75%;bottom[bounce]:100%;" data-9500="bottom:0%;">bounce</div>
-	</div>
-
-	<div id="download" data-10000="top[cubic]:100%;border-radius[cubic]:0em;background:rgb(0,50,100);border-width:0px;" data-12000="top:10%;border-radius:2em;background:rgb(190,230,255);border-width:10px;">
-		<h2>the end</h2>
-		<p>by the way, you can also animate colors (you did notice this, didn't you?)</p>
-		<p><strong>Now get this thing on <a href="https://github.com/Prinzhorn/skrollr">GitHub</a> and spread the word, it's open source!</strong> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://prinzhorn.github.com/skrollr/" data-via="Prinzhorn">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
-		<p>Check out more <a href="https://github.com/Prinzhorn/skrollr/tree/master/examples#examples">examples</a>.</p>
-		<p>Handcrafted by <a href="https://twitter.com/Prinzhorn" class="twitter-follow-button" data-show-count="false">Follow @Prinzhorn</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
-	</div>
-
-	<div id="scrollbar" data-0="top:0%;margin-top:2px;" data-end="top:100%;margin-top:-52px;"></div>
 
 
-</body>
 
-</html>
+
+
+
+
+
+
+<section class="section0">
+    <h2>TEAM BERT</h2>
+    <p>Welcome to Israel's Top Martial Arts Academy</p>
+      <div class="mma"><img src="images/img_1.png" class="picture0"></div>
+</section>
+<section class="section1">
+    <p>השיעורים שלנו</p>
+    <div class="class-listclasses">
+        <div class="classes">
+             <div class="class1 classess">
+                <div class="allinfo">
+                    <img src="images/img_7.png">
+                    <h2>שילוב בין מתודות לחימה שונות</h2>
+                    <span>למדו עוד</span>
+                </div>
+             </div>
+             <div class="class2 classess">
+                <div class="allinfo">
+                    <img src="images/img_8.png">
+                    <h2>השח מט של אומנויות הלחימה</h2>
+                    <span>למדו עוד</span>
+                </div>
+             </div>
+             <div class="class3 classess">
+                 <div class="allinfo">
+                    <img src="images/img_9.png">
+                     <h2>אגרופים בעיטות ומה שבניהם</h2>
+                     <span>למדו עוד</span>
+                 </div>
+             </div>
+        </div>
+        <div class="classes1">
+             <div class="class4 classess1">
+                 <div class="allinfo">
+                    <img src="images/img_11.png">
+                     <h2>האולד סקול של אומנויות הלחימה המודרניות</h2>
+                     <span>למדו עוד</span>
+                </div>
+             </div>
+             <div class="class5 classess1">
+                <div class="allinfo">
+                    <img src="images/img_13.png">
+                    <h2>קבוצות למתחילים, אומנות לחימה באוירה אחרת</h2>
+                    <span>למדו עוד</span>
+                </div>
+             </div>
+             <div class="class6 classess1">
+                <div class="allinfo">
+                    <img src="images/img_13.png">
+                    <h2>אומנות הלחימה שצמחה מתוך קשיי היומיום של תושבי ברזיל</h2>
+                    <span>למדו עוד</span>
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
+<section class="section2">
+    <div class="sensei-imfo">
+        <div class="senssei">
+           <img src="images/img_14.png" no-repaet>
+        </div>
+        <div class="speach">
+           <h3>מי אנחנו</h3>
+           <p>
+קבוצה של אמני לחימה ולוחמים שרואים בלימוד ואימון לחימה דרך חיים. כל מאמן ומדריך במכון הוא איש מקצוע מהשורה הראשונה בתחומו, אנחנו חיים ונושמים את אומנות הלחימה אותה אנו מדריכים. המרחב שיצרנו מספק פלטפורמה להקניית כלים לשליטה, וגדילה בהיבט הטכני, הפיזי, והמנטאלי. המקצוע שלנו הוא בנייה של אמני לחימה ולוחמים, ובעיקר בני אדם מסופקים, מסוגלים ומוגשמים יותר
+           </p>
+           <span>
+            בואו לשיעור ניסיון חינם
+           </span>
+        </div>
+    </div>
+</section>
+<section class="section3">
+    <div class="all-item">
+        <h1>בוא למצוא את הלוחם שבך</h1>
+        <div class="items">
+            <div class="item1">
+                <img src="images/img_15.png">
+                <p class="p">קשב ומיקוד</p>
+                <p>
+                    ללמוד להיות נוכח.ת, מפוקס.ת, להיות בתוך המשימה, בתוך התרגיל. מדיטציה בתוך תנועה
+                </p>
+            </div>
+            <div class="item1">
+                <img src="images/img_16.png">
+                <p class="p">חוסן מנטאלי</p>
+                <p>
+                    במכון את.ה עסוק.ה כל אימון  בלתרגל.ת התגברות על קשיים, מכשולים, אתגרים שלא חשבת אי פעם שאפשריים לך, זה משליך על החיים, ואת.ה מוצא.ת את עצמך עמיד.ה יותר למכשולים ולקשיי היום יום
+                </p>
+            </div>
+            <div class="item1">
+                <img src="images/img_17.png">
+                <p class="p">
+                    ״שחרור״ לחצים
+                </p>
+                <P>
+                    מגיע סוף היום, חוזר.ת מיום במשרד/לימודים/כביש. שעה על המזרון/שק/בקרב, ואתה יוצא.ת שונה לגמרי, את הלחץ מחליף רוגע ואת הרעש שבראש שקט נעים
+                </P>
+            </div>
+            <div class="item1">
+                <img src="images/img_18.png">
+                <p class="p">
+                    למדו להגן על עצמכם
+                </p>
+                <p>
+                    את.ה לא רק נכנס.ת לכושר מטורף אלא גם רוכש.ת כלים ומיומנויות שיעזרו להגן על עצמך במצב אמת, ויוצא עם תחושת ביטחון ומסוגלות עצמית
+                </p>
+            </div>
+        </div>
+        <div class="items1">
+            <div class="item2">
+                <img src="images/img_19.png">
+                <p class="p">שיפור הקורדינציה והיציבות</>
+                <p>
+                    כדי להיות לוחם טוב אתה חייב להיות קורדינטיבי ותנועתי, את.ה תרגיש.י את השינוי זולג לתוך המרחב היום יומי
+                </p>
+            </div>
+            <div class="item2">
+                <img src="images/img_20.png">
+                <p class="p">כוח וכושר פונקציונלי</p>
+                <p>
+                    פשוט להיות בכושר הכי טוב שהיית בו בחיים, זה לא קל, אבל זאת התוצאה
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section4">
+    <div class="bot">בואו לשיעור ניסיון חים</div>
+    <div class="movie">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/x8BW1KEVuKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+<section class="section5">
+    <div class="spanspan">
+        <p>למה טים ברט</p>
+    </div>
+    <div class="marcial-image">
+            <div class="fight marcial">
+                <div class="pic1 nnn">
+                    <img src="images/img_21.png">
+                </div>
+                <div class="explain1">
+                    <p class="pp">מקצועיות</p>
+                    <p>
+                לוקחים אותך לתוך עולם הלחימה בצורה כזו שתשמור עליך ותלהיב אותך
+                    </p>
+                </div>
+                <div class="pic1 nnn1">
+                    <img src="images/img_21.png">
+                </div>
+            </div>
+            <div class="fight marcial1">
+                <div class="pic2">
+                    <img src="images/img_22.png">
+                </div>
+                <div class="explain2">
+                    <p class="ppp">המדריכים הטובים ביותר</p>
+                    <p>
+                    המדריכים הטובים ביותר בארץ, עם היכולת לגרום לכם למצות את הפוטנציאל שלכם
+                    </p>
+                </div>
+            </div>
+            <div class="fight marcial2">
+                <div class="pic3">
+                    <img src="images/img_23.png">
+                </div>
+                <div class="explain3">
+                     <p class="pppp">המתקנים הטובים ביותר</p>
+                     <p>
+                    פשוט ללמוד במכון הטוב ביותר בארץ
+                     </p>
+                </div>
+            </div>
+    </div>
+</section>
+<section class="section6">
+    <div class="container-gim">
+        <div class="gim">
+            <img src="images/img_24.png">
+        </div>
+        <div class="gim-contain">
+            <span>תשובות לשאלות נפוצות</span>
+        </div>
+        <span class="spann">המדריכים שלנו</span>
+
+    </div>
+</section>
+<section class="section7">
+    <div class="sensei-container">
+        <div class="small-box">
+        </div>
+        <div class="senseipicture">
+            <img src="images/img_25.png">
+        </div>
+        <div class="senseiwords">
+            <span>
+               ערן ברט
+            </span>
+            <P>
+                מתאמן באומנויות לחימה שונות כגון קונג פו, קראטה וקרב מגע ישראלי משנת 1992 ומתאמן בג'יו גי'טסו ברזילאי זה 20 שנה (חגורה שחורה דאן 2), בין היתר למד במכונים ביפן, תאילנד וברזיל. אגרוף ואגרוף תאילנדי למד אצל רענן טל ובמכונים מובילים בתאילנד. התחרה ב MMA בארץ בשנים 2001-2006 בלתי מנוצח בזירה.
+
+מדריך יחידות מיוחדות בארץ ובעולם, מאבטחים ולוחמים ביחידות ממלכתיות ובפרויקטים בחו"ל. בוגר בית הספר לאימון אימושיין, בעל תואר ראשון במדעי ההתנהגות ותואר שני בניהול סכסוכים, מו"מ וגישור. כיום, בין היתר, עומד בראש פרויקט להטמעת ערכים חברתיים וחינוך בקרב בני נוער באמצעות אומנויות לחימה
+            </P>
+        </div>
+    </div>
+</section>
+<section class="section8">
+    <div class="people0">
+        <div class="teacher io0">
+            <div class="teacherprofile">
+               <img src="images/img_26.png">
+            </div>
+            <span>
+נועה ללוש
+            </span>
+            <h3>
+מאמנת ג'יו ג'יטסו ברזילאי
+            </h3>
+            <p>
+החלה להתאמן באומנויות לחימה בשנת 2005, בעלת חגורה חומה בג'יו ג'יטסו ברזילאי וחגורה כחולה בנינג'יטסו יפני. למדה ג'יו ג'יטסו בארץ ובברזיל ובעלת תעודת מדריכת אמנויות לחימה מטעם בית הספר קארטה דו אינטרנשיונל.​ מאמנת את קבוצת הנשים בג'יוג'יטסו ברזילאי וקבוצות ילדים. מעבירה שיעורים
+            </p>
+        </div>
+        <div class="teacher io1">
+            <div class="teacherprofile">
+               <img src="images/img_27.png">
+            </div>
+            <span>
+אדם גלילי
+            </span>
+            <h3>
+מאמן אגרוף תאילנדי
+            </h3>
+            <p>
+עוסק באמנויות לחימה מגיל צעיר ובעל ניסיון עשיר בקרבות מקצוענים בארץ ובחו"ל, מאמן מעל 10 שנים.
+            </p>
+        </div>
+        <div class="teacher io2">
+            <div class="teacherprofile">
+               <img src="images/img_28.png">
+            </div>
+            <span>
+סטיב כהן
+            </span>
+            <h3>
+מאמן ג'יו ג'יטסו ברזילאי ומאמן ראשי בLIVFIT TLV  כושר פונקציונאלי
+            </h3>
+            <p>
+מאמן כושר מעל 15 שנה, בעבודה עם מגוון רחב של קבוצות ותלמידים פרטיים, בין אם צעירים, מבוגרים, בעלי מוגבלויות, נשים בהריון ועוד. כיום מנהל את LIVFIT TLV, כחלק מ Team Bert. בעל חגורה חומה בג'יו ג'יטסו ברזילאי, תחת ערן ברט ודוד רויז. עלה לארץ ב2013 מדנבר, קולורדו ומאז מאמן ג'יו ג'יטסו
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section9">
+  <div class="people1">
+        <div class="teacher1 io0">
+            <div class="teacherprofile1">
+               <img src="images/img_29.png">
+            </div>
+            <span>
+הראל "סנורה" קדרון
+            </span>
+            <h3>
+מאמן קפוארה ואקרובטיקה
+            </h3>
+            <p>
+מתאמן בקפוארה משנת 2000 במסגרת המרכז הישראלי לקפוארה ומדריך משנת 2006. הוסמך בשנת 2013 לדרגת פרופסור לקפוארה מהדרגות הבכירות בארץ. כיום בעל דרגת קונטרה מאסטר. בוגר קורס מדריכי קפוארה מטעם המרכז הישראלי לקפוארה מכון וינגייט, הדריך שנים רבות תחת מאסטר לקפוארה וכיום מלמד עצמאית ברחבי תל אביב. מעביר סדנאות בארץ ובכל רחבי העולם. עוסק באמנויות לחימה נוספות ובעל חגורה כחולה בג'יו ג'יטסו ברזילאי.
+
+            </p>
+        </div>
+        <div class="teacher1 io1">
+            <div class="teacherprofile1">
+               <img src="images/img_30.png">
+            </div>
+            <span>
+                אסף מיכאלוביץ
+            </span>
+            <h3>
+                מאמן ג'יו ג'יטסו ברזילאי
+            </h3>
+            <p>
+                מתאמן באמנויות לחימה משנת 2006 ובג'יו ג'יטסו ברזילאי משנת 2011. קודם לחגורה שחורה בשנת 2017 והחל לאמן סמוך לאחר מכן. מתאמן בmovement משנת 2014 ומאמן משנת 2018. בעל תואר ראשון במשפטים וחשבונאות מאוניברסיטת תל אביב.
+            </p>
+        </div>
+        <div class="teacher1 io2">
+            <div class="teacherprofile1">
+               <img src="images/img_31.png">
+            </div>
+            <span>
+                שקד צפוני
+            </span>
+            <h3>
+                מאמן ג'יו ג'יטסו ברזילאי, קיקבוקסינג וMMA
+            </h3>
+            <p>
+            מתאמן מילדות באמנויות לחימה וכ-10 שנים בתחום הקיקבוקסינג, אגרוף תאילנדי, אגרוף קלאסי וג'יו ג'יטסו ברזילאי. מדריך לוחמה בכיר בשלדג ומדריך בקורס הכנה לקורס אבטחה ממלכתי. מדריך טניס ומאמן איינגאר יוגה מוסמך.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="section10">
+    <div class="people2">
+        <div class="teacher2 io0">
+            <div class="teacherprofile2">
+               <img src="images/img_32.png">
+            </div>
+            <div class="teachercoment">
+                <span>
+ברק חדד
+            </span>
+            <h3>
+                מאמן FlowMotion
+            </h3>
+            <p>
+                מתאמן בקראטה מגיל 4 והוסמך לדרגת דאן 1 ב 1999. מוסמך להוראת קראטה מטעם מכון וינגייט וכמטפל ברפואה סינית (Lic. Ac). מנהל את מועדון הקראטה "קי מה קאן" ומרצה אורח בקורס מדריכי אמנויות לחימה בבית הספר למקצועות הספורט. עוסק שנים רבות בתחום התנועה ברמה הטיפולית (מניעת וטיפול בפציעות), לחימתית ועוד ומרכז את נושא המובמנט בLIVFIT TLV.
+            </p>
+            </div>
+        </div>
+        <div class="teacher2 io1">
+            <div class="teacherprofile2">
+               <img src="images/img_33.png">
+            </div>
+            <div class="teachercoment">
+                 <span>
+                סרגי דיבקוב
+            </span>
+            <h3>
+               מאמן אגרוף קלאסי
+            </h3>
+            <p>
+                התאמן באגרוף בברית המועצות שם התחרה בנבחרת ברית המועצות ואוקראינה. בין תאריו היה 5 פעמים אלוף אוקראינה, אלוף ברית המועצות בהתאגדות דינמה, אלוף סנגן, אלוף עולם IBO ב- 96
+            </p>
+            </div>
+        </div>
+        <div class="teacher2 io2">
+            <div class="teacherprofile2">
+               <img src="images/img_34.png">
+            </div>
+            <div class="teachercoment">
+                <span>
+              עומרי "וליו" כנרתי
+            </span>
+            <h3>
+               מאמן קפוארה אקרובטיקה תנועה
+            </h3>
+            <p>
+                מתאמן בקפוארה משנת 2001 במסגרת המרכז הישראלי לקפוארה ובעל דרגת אינסטרוטור. בוגר קורס מדריכים מטעם וינגייט, מדריך קבוצות בתל אביב ורעננה וכמו כן סדנאות בארץ ובעולם. מעביר שיעורי אקרובטיקה ותנועה.
+            </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section11">
+    <div class="people3">
+        <div class="teacher3 io0">
+            <div class="teacherprofile3">
+               <img src="images/img_35.png">
+            </div>
+            <span>
+ברק חדד
+            </span>
+            <h3>
+                מאמן FlowMotion
+            </h3>
+            <p>
+                מתאמן בקראטה מגיל 4 והוסמך לדרגת דאן 1 ב 1999. מוסמך להוראת קראטה מטעם מכון וינגייט וכמטפל ברפואה סינית (Lic. Ac). מנהל את מועדון הקראטה "קי מה קאן" ומרצה אורח בקורס מדריכי אמנויות לחימה בבית הספר למקצועות הספורט. עוסק שנים רבות בתחום התנועה ברמה הטיפולית (מניעת וטיפול בפציעות), לחימתית ועוד ומרכז את נושא המובמנט בLIVFIT TLV.
+            </p>
+        </div>
+        <div class="teacher2 io1">
+            <div class="teacherprofile2">
+               <img src="images/img_36.png">
+            </div>
+            <span>
+                סרגי דיבקוב
+            </span>
+            <h3>
+               מאמן אגרוף קלאסי
+            </h3>
+            <p>
+                התאמן באגרוף בברית המועצות שם התחרה בנבחרת ברית המועצות ואוקראינה. בין תאריו היה 5 פעמים אלוף אוקראינה, אלוף ברית המועצות בהתאגדות דינמה, אלוף סנגן, אלוף עולם IBO ב- 96
+            </p>
+        </div>
+    </div>
+    <div class="click0">
+            <span>בואו לשיעור ניסיון חינם</span>
+    </div>
+</section>
+<footer>
+     <div class="icon">
+            <div class="icon2">
+                 <ul>
+                        <li><i class="fa-brands fa-twitter-square"></i></li>
+                        <li><i class="fa-brands fa-facebook-square"></i></li>
+                        <li><i class="fa-brands fa-whatsapp-square"></i></li>
+                 </ul>
+            </div>
+     </div>
+    <p>Privacy Policy | מדיניות פרטיות</p>
+</footer>
