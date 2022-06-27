@@ -6,6 +6,23 @@
     <title>jujistu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
 
 </head>
 <header class="header">
@@ -99,10 +116,6 @@
 
 </header>
 
-
-
-
-
 <body>
 	<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
 	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
@@ -156,23 +169,6 @@
 
 	<div id="scrollbar" data-0="top:0%;margin-top:2px;" data-end="top:100%;margin-top:-52px;"></div>
 
-	<script type="text/javascript" src="js/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="js/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-			WTF: Math.random,
-			inverted: function(p) {
-				return 1-p;
-			}
-		}
-	});
-	</script>
 </body>
 
 
