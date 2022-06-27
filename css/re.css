@@ -1,0 +1,378 @@
+@media(max-width:420px){
+.nazo,
+.menu{
+display:none;
+}
+
+.header{
+position:fixed;
+width:100%;
+height:80px;
+}
+
+.container-header{
+width:100%;
+height:100px;
+position:relative;
+}
+
+.container-header .logo{
+position:absolute;
+top:0;
+left:190;
+}
+
+
+.menu2{
+}
+
+.news{
+display:block;
+position:relative;
+right:-370;
+top:-40;
+}
+
+
+
+.menu2 .ul10{
+position:absolute;
+background-color:white;
+top:90;
+left:-87;
+list-style:none;
+text-align:right;
+width:85px;
+height:500px;
+transform:translateY(-130%);
+transition:0.5s;
+}
+
+.menu2 .ul10 li:hover{
+color:red;
+}
+
+
+
+input[type=checkbox]{
+transform:scale(8);
+background-color:blue;
+opacity:0;
+position:absolute;
+top:40;
+left:-30;
+}
+
+
+.nav-toggle{
+background-color:transparent;
+border:1px solid transparent;
+transform:scale(1);
+float:left;
+margin-top:70px;
+}
+
+.checkbox0:checked~ .menu2 .ul10{
+transform:translateY(0%);
+}
+
+.mma{
+width:100%;
+height:600px;
+}
+
+
+.section1{
+margin-top:0;
+width:100%;
+height:2600px;
+background-color:white;
+text-align:center;
+}
+
+.section1 p{
+padding-top:10px;
+font-size:30px;
+font-weight:700;
+}
+
+.section1 .class-listclasses{
+width:100%;
+height:100%;
+background-color:white;
+}
+
+
+.section1 .classes{
+width:100%;
+height:1150px;
+text-align:center;
+display:block;
+background-color:pink;
+}
+
+.section1 .classess{
+width:100%;
+height:340px;
+text-align:center;
+display:block;
+background-color:black;
+}
+
+
+
+
+.section1 .classes1{
+width:100%;
+height:1200px;
+text-align:center;
+display:block;
+background-color:white;
+margin-top:0;
+}
+
+.section1 .classess1{
+width:100%;
+height:340px;
+text-align:center;
+display:block;
+background-color:black;
+}
+
+section{
+overflow:hidden;
+}
+
+
+.section2{
+width:100%;
+height:700px;
+background-color:white;
+text-align:right;
+}
+
+.section2 .sensei-imfo{
+width:90%;
+margin:0 auto;
+display:block;
+
+}
+
+.section2 .senssei{
+width:90%;
+height:30%;
+margin:0 auto;
+}
+
+.section2 .senssei img{
+width:100%;
+height:auto;
+}
+
+.speach{
+margin:0 auto;
+text-align:center;
+width:80%;
+}
+
+
+.speach h3{
+font-size:30px;
+margin:10 0 0 0px;
+}
+
+.speach p{
+width:100%;
+margin:40 0 70 0px;
+}
+
+.speach span{
+margin-top:70px;
+background-color:red;
+color:white;
+padding:20 40 20 40px;
+}
+
+.section3,
+.section4{
+display:none;
+}
+
+
+
+
+.section5{
+width:100%;
+height:1600px;
+background-color:black;
+text-align:center;
+}
+
+.marcial-image{
+margin:0 auto;
+width:70%;
+height:80%;
+background-color:black;
+}
+
+
+.fight{
+display:block!important;
+}
+
+
+
+.explain1,
+.explain2{
+text-align:right;
+width:100%;
+}
+
+.pic1{
+width:100%;
+}
+
+.pic1 img,
+.pic2 img,
+.pic3 img{
+width:100%;
+}
+
+
+.explain3 .pppp,
+.explain2 .ppp{
+color:red;
+font-weight:900;
+font-size:24px;
+padding:20 0 10 0px;
+}
+
+.nnn1{
+display:block;
+}
+
+.nnn{
+display:none;
+}
+
+.pic3{
+width:60%;
+margin:0 auto;
+}
+
+.pic3 img{
+width:100%;
+height:auto;
+}
+
+.section6{
+width:100%;
+height:470px;
+background-color:white;
+text-align:center;
+}
+
+
+.container-gim{
+width:100%;
+height:450px;
+margin:0 auto;
+}
+
+.section7{
+width:100%;
+height:840px;
+background-color:white;
+text-align:center;
+}
+
+
+.section7 .small-box{
+display:none;
+}
+
+.sensei-container .senseipicture{
+width:65%;
+height:auto;
+margin:40 auto;
+text-align:center;
+}
+
+.sensei-container .senseipicture img{
+border-radius:50%;
+width:100%;
+height:auto;
+}
+
+
+.senseiwords{
+width:80%;
+background-color:white;
+margin:0 auto;
+text-align:center;
+}
+
+.section8,
+.section9,
+.section11{
+display:none;
+}
+
+.section10{
+width:100%;
+height:1600px;
+background-color:white;
+text-align:center;
+}
+
+
+.section10 .people2{
+display:block;
+width:60%;
+height:600px;
+background-color:white;
+margin:0 auto;
+}
+
+.section10 .teacherprofile2{
+width:80%;
+height:80px;
+margin:0 auto;
+}
+
+.section10 .people2 img{
+width:100%;
+height:auto;
+border-radius:50%;
+}
+
+.section10 .teacher2{
+width:100%;
+height:auto;
+display:block;
+}
+
+.section10 .teacher2 p{
+width:100%;
+margin:0 auto;
+}
+
+.teachercoment{
+margin-top:140px;
+}
+
+
+.icon2{
+margin:0 auto;
+background-color:black;
+}
+
+.icon2 ul{
+list-style:none;
+margin:0 auto;
+display:flex;
+padding-top:15px;
+}
+
+
+}
