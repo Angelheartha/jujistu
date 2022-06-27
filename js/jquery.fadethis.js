@@ -1,11 +1,3 @@
-/*
- *  jQuery FadeThis - v1.0.4
- *  A lightweight, simple, yet powerful jQuery plugin for appear-as-you-scroll features.
- *  https://github.com/lwiesel/jquery-fadethis/
- *
- *  Made by lwiesel
- *  Under MIT License
- */
 ;(function ( $, window, document, undefined ) {
     // Defaults
     var _buffer = null,
