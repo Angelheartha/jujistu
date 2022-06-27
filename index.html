@@ -6,6 +6,17 @@
     <title>jujistu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script type="text/javascript">var s = skrollr.init({
+	edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			    }
+			}
+		});
+    </script>
 </head>
 <header class="header">
     <div class="container-header">
@@ -97,7 +108,18 @@
     </div>
 
 </header>
+
+    <div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
+	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+
 <section class="section0">
+    <div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
+	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+
     <h2>TEAM BERT</h2>
     <p>Welcome to Israel's Top Martial Arts Academy</p>
       <div class="mma"><img src="images/img_1.png" class="picture0"></div>
